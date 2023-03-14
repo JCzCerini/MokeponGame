@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #041562;
+  color: white;
+}
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 50px;
+  gap: 20px;
+}
+.title {
+  font-size: 52px;
+  font-family: 'Fredoka One', cursive;
+}
+.subtitulo {
+  font-size: 32px;
+  text-align: center;
+}
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-content: center;
+  justify-content: center;
+}
+.tarjeta-de-mokepon {
+  display: flex;
+  width: 450px;
+  height: 180px;
+  background-color: #11468f;
+  border: 2px solid white;
+  border-radius: 25px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.tarjeta-de-mokepon img {
+  width: 150px;
+}
+.tarjeta-de-mokepon p {
+  font-size: 20px;
+}
+#boton-mascota {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  width: 350px;
+  height: 80px;
+  margin-bottom: 20px;
+  background-color: rebeccapurple;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-size: 28px;
+}
+input {
+  display: none;
+}
+input:checked + label {
+  background-color: #FFC93C;
+  border-color: transparent;
+}
+#seleccionar-ataque {
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.container-botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+.boton-de-ataque {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #11468f;
+  border-color: transparent;
+  border-radius: 50%;
+}
+#mensajes {
+  width: 425px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #041562;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+#reiniciar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#boton-reiniciar {
+  width: 250px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #FFC93C;
+  color: #041562;
+  border: transparent;
+  border-radius: 30px;
+}
+.ataques {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  place-items: center;
+  gap: 20px;
+}
+.combate {
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #FFC93C;
+  border-radius: 20px;
+}
+.lifes {
+  font-size: 52px;
+  color: #FB2576;
+}
+.name-mascota {
+  font-size: 28px;
+  color: #8D9EFF;
+}
+.ataque-enfrentados {
+  font-size: 35px;
+}
+#ver-mapa {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#container-move-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container-move-buttons button {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  width: 150px;
+  height: 80px;
+  margin: 10px;
+  background-color: rebeccapurple;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-size: 28px;
+}
+#container-move-buttons button:focus {
+  opacity: .5;
+}
+@media (max-width: 380px){
+  #container-move-buttons button {
+    width: 85px;
+    height: 45px;
+    margin: 2px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 380px) and (max-width: 550px){
+  .tarjeta-de-mokepon {
+    width: 280px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+  }
+  #mensajes {
+    width: 330px;
+  }
+  .ataques {
+    display: flex;
+    flex-direction: column;
+  }
+  #boton-mascota {
+    width: 280px;
+  }
+  #container-move-buttons button {
+    width: 110px;
+    height: 50px;
+    margin: 3px;
+    font-size: 20px;
+  }
+  #ver-mapa .subtitulo {
+    font-size: 34px;
+  }
+}
+@media (min-width: 1035px){
+  #seleccionar-mascota {
+    height: 100vh;
+  }
+}

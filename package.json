@@ -1,0 +1,23 @@
+{
+  "name": "mokepongame",
+  "version": "1.0.0",
+  "description": "Es el proyecto del nuevo curso basico, el cual se lleva a cabo tanto el aprendizaje como la puesta en practica, de muchos conceptos sobre front-end y back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCzCerini/MokeponGame.git"
+  },
+  "author": "Silva Cerini Juan Cruz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JCzCerini/MokeponGame/issues"
+  },
+  "homepage": "https://github.com/JCzCerini/MokeponGame#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
