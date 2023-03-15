@@ -27,7 +27,6 @@ class Jugador {
     this.ataques = ataques
   }
 }
-
 class Mokepon {
   constructor(nombre) {
     this.nombre = nombre
@@ -50,15 +49,12 @@ app.post("/mokepon/:jugadorId", (req, res) => {
   const jugadorId = req.params.jugadorId || ""
   const nombre = req.body.mokepon || ""
   const mokepon = new Mokepon(nombre)
-  
   const jugadorIndex = jugadores.findIndex((jugador) => jugadorId === jugador.id)
 
   if (jugadorIndex >= 0) {
     jugadores[jugadorIndex].asignarMokepon(mokepon)
   }
-  
   console.log(jugadores)
-  console.log(jugadorId)
   res.end()
 })
 

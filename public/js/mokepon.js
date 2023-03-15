@@ -179,12 +179,12 @@ function iniciarJuego() {
 }
 function unirseAlJuego() {
   fetch("http://192.168.100.12:8080/unirse")
-    .then(function (res) {
+    .then((res) => {
       if (res.ok) {
         res.text()
-          .then((respuesta) => {
-            console.log(respuesta)
-            jugadorId = respuesta
+          .then((response) => {
+            console.log(response);
+            jugadorId = response
           })
       }
     })
@@ -426,7 +426,6 @@ function enviarPosicion(x, y) {
         if (res.ok) {
             res.json()
                 .then(({ enemigos }) => {
-                    console.log(enemigos)
                     mokeponesEnemigos = enemigos.map((enemigo) => {
                         console.log(enemigo);
                         let mokeponEnemigo = null
@@ -499,7 +498,8 @@ function iniciarMapa() {
 function obtenerObjetoMascota() {
     for (let i = 0; i < mokepones.length; i++) {
         if (mascotaJugador === mokepones[i].nombre) {
-            return mokepones[i]
+          mokepones[i].id = jugadorId
+          return mokepones[i]
         }
     }
 }
